@@ -1,0 +1,9 @@
+.root {
+    -fx-background-image: url("Background2.png");
+    -fx-background-size: cover;
+}
+
+#title {
+    -fx-font-size: 60;
+    -fx-font-family: "sans-serif";
+}

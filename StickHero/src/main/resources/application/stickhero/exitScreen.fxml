@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.stickhero.ExitScreen">
+   <children>
+      <ImageView fx:id="homeButton" fitHeight="68.0" fitWidth="74.0" layoutX="14.0" layoutY="51.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/homeButton2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartButton" fitHeight="61.0" fitWidth="70.0" layoutX="83.0" layoutY="55.0" onMouseClicked="#restartGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/restartButton2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="reviveButton" fitHeight="62.0" fitWidth="118.0" layoutX="147.0" layoutY="55.0" onMouseClicked="#reviveGame" pickOnBounds="true">
+         <image>
+            <Image url="@Assets/REVIVE.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
