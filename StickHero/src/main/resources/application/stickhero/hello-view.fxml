@@ -11,16 +11,24 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="anchorPane" alignment="TOP_RIGHT" blendMode="MULTIPLY" fillWidth="false" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.stickhero.MainPageController">
+<VBox fx:id="ap" alignment="TOP_RIGHT" blendMode="MULTIPLY" fillWidth="false" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="568.0" prefWidth="777.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.stickhero.MainPageController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
    <children>
-      <Label fx:id="title" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="327.0" text="Stick Hero" textAlignment="RIGHT" translateX="-220.0" translateY="50.0" VBox.vgrow="SOMETIMES">
+      <ImageView fitHeight="50.0" fitWidth="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true" translateX="-670.0">
+         <image>
+            <Image url="@Assets/Exit.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="title" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="327.0" text="Stick Hero" textAlignment="RIGHT" translateX="-220.0" VBox.vgrow="SOMETIMES">
          <VBox.margin>
             <Insets />
          </VBox.margin></Label>
-      <ImageView fx:id="play" fitHeight="147.0" fitWidth="564.0" onMouseClicked="#play" preserveRatio="true" translateX="-310.0" translateY="60.0">
+      <ImageView fx:id="play" fitHeight="147.0" fitWidth="564.0" onMouseClicked="#play" preserveRatio="true" translateX="-310.0">
          <image>
             <Image url="@Assets/playButton2.png" />
          </image>
@@ -31,27 +39,19 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="73.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateX="-600.0" translateY="22.0">
+      <ImageView fitHeight="73.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateX="-600.0" translateY="-93.0">
          <image>
             <Image url="@Assets/stickHero.png" />
          </image>
       </ImageView>
-      <Rectangle fx:id="questionBox" arcHeight="10.0" arcWidth="10.0" fill="#f1f818" height="35.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" translateX="-10.0" translateY="70.0" width="80.0" />
-      <Text fx:id="questionText" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to Play" translateX="-20.0" translateY="25.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000810" height="216.0" stroke="BLACK" strokeType="INSIDE" translateX="-550.0" translateY="-105.0" width="158.0" />
-      <FlowPane alignment="BOTTOM_RIGHT" cacheShape="false" prefHeight="73.0" prefWidth="284.0" prefWrapLength="100.0" translateX="-15.0" translateY="-190.0">
+      <Rectangle fx:id="questionBox" arcHeight="10.0" arcWidth="10.0" fill="#f1f818" height="60.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" translateX="-10.0" translateY="-30.0" width="200.0" />
+      <Text fx:id="questionText" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Space key: To increase stick size Down Arrow: Invert the stick hero to collect cherries" textAlignment="RIGHT" translateX="-20.0" translateY="-105.0" wrappingWidth="175.50128173828125" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000810" height="221.0" stroke="BLACK" strokeType="INSIDE" translateX="-550.0" translateY="-265.0" width="158.0" />
+      <FlowPane alignment="BOTTOM_RIGHT" cacheShape="false" prefHeight="73.0" prefWidth="284.0" prefWrapLength="100.0" translateX="-15.0" translateY="-350.0">
          <children>
-            <ImageView fx:id="viewSavedButton" fitHeight="51.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="viewSavedButton" fitHeight="51.0" fitWidth="125.0" onMouseClicked="#viewSavedGames" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Assets/viewSavedGames.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fx:id="leaderBoardButton" fitHeight="54.0" fitWidth="99.0" onMouseClicked="#leaderBoard" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Assets/leaderBoardButton2.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />

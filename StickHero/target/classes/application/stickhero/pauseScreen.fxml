@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="271.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.stickhero.PauseScreenController">
+   <children>
+      <Label layoutX="53.0" layoutY="86.0" prefHeight="66.0" prefWidth="122.0" text="Score:">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="sc" layoutX="186.0" layoutY="87.0" prefHeight="28.0" prefWidth="47.0" text="0">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="homeButton" fitHeight="68.0" fitWidth="74.0" layoutX="114.0" layoutY="179.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/homeButton2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="saveButton" fitHeight="78.0" fitWidth="74.0" layoutX="34.0" layoutY="179.0" onMouseClicked="#saveGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/save.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartButton" fitHeight="61.0" fitWidth="70.0" layoutX="201.0" layoutY="183.0" onMouseClicked="#restartGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/restartButton2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="47.0" layoutX="18.0" layoutY="22.0" onMouseClicked="#backToGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/back.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

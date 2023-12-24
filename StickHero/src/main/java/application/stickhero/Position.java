@@ -1,12 +1,16 @@
 package application.stickhero;
 
-public class Position {
+public class Position implements java.io.Serializable{
     private double x;
     private double y;
 
     public Position() {
         x = 0.0;
         y = 0.0;
+    }
+    public Position(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
     public double getX() {
         return this.x;

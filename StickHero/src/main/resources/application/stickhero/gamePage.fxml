@@ -7,43 +7,45 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.stickhero.GamePageController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="359.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.stickhero.GamePageController">
    <children>
-      <Rectangle arcWidth="5.0" height="300.0" layoutX="42.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="106.0" />
-      <Rectangle arcWidth="5.0" height="300.0" layoutX="301.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
-      <Rectangle arcWidth="5.0" height="300.0" layoutX="955.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
-      <Label layoutX="384.0" layoutY="14.0" prefHeight="66.0" prefWidth="122.0" text="Score:">
-         <font>
-            <Font size="45.0" />
-         </font>
-      </Label>
-      <Label fx:id="score" layoutX="523.0" layoutY="15.0" prefHeight="66.0" prefWidth="57.0" text="0">
-         <font>
-            <Font size="46.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="827.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="cherry" fitHeight="27.0" fitWidth="27.0" layoutX="279.0" layoutY="17.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/cherry2.png" />
          </image>
       </ImageView>
-      <Label fx:id="cherries" alignment="TOP_LEFT" layoutX="878.0" layoutY="83.0" prefHeight="38.0" prefWidth="57.0" text=": 0">
+      <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="266.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/cherry2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="85.0" layoutY="22.0" prefHeight="38.0" prefWidth="112.0" text="Score:">
          <font>
-            <Font size="29.0" />
+            <Font size="23.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e3db7100" height="60.0" layoutX="817.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="122.0" />
-      <Rectangle fx:id="stick" fill="#ffe659" height="12.0" layoutX="117.0" layoutY="288.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
-      <ImageView fx:id="player" fitHeight="76.0" fitWidth="68.0" layoutX="42.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="score" layoutX="152.0" layoutY="25.0" prefHeight="6.0" prefWidth="27.0" text="0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="cherries" alignment="TOP_LEFT" layoutX="293.0" layoutY="62.0" prefHeight="26.0" prefWidth="27.0" text="0" translateX="8.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e3db7100" height="38.0" layoutX="254.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="77.0" />
+      <ImageView fx:id="player" fitHeight="76.0" fitWidth="68.0" layoutX="-8.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" x="10.0" y="-7.0">
          <image>
             <Image url="@Assets/stickHero.png" />
          </image>
       </ImageView>
-      <Rectangle height="300.0" layoutX="480.0" layoutY="304.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <ImageView fx:id="pauseButton" fitHeight="60.0" fitWidth="68.0" layoutX="32.0" layoutY="30.0" onMouseClicked="#exitGame" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pauseButton" fitHeight="60.0" fitWidth="39.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#pauseScreen" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Assets/pauseButton.png" />
          </image>
       </ImageView>
+      <Rectangle fx:id="stick" height="6.0" layoutX="74.0" layoutY="307.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
+      <Rectangle fx:id="plat" height="300.0" layoutY="307.0" stroke="BLACK" strokeType="INSIDE" width="112.0" />
    </children>
 </AnchorPane>

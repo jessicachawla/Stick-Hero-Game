@@ -7,6 +7,7 @@ public class Cherry extends Position {
     }
     public void createCherry() {
         // creates cherry at random position and returns the position
+        this.setY(300);
     }
     public void removeCherry() {
         // remove cherry

@@ -1,21 +1,88 @@
 package application.stickhero;
 
-public class SavedGame {
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 
-    private Player player;
+
+public class SavedGame implements java.io.Serializable {
+
     private int score;
-    private int cherries;
 
-    public SavedGame(GamePage gamePage) {
-        this.player = gamePage.getPlayer();
-        this.score = gamePage.getScore();
-        this.cherries = gamePage.getCherries();
+    public double getCurrentPlatformWidth() {
+        return currentPlatformWidth;
     }
 
-    public static void loadFromFile(String filePath) {
+    public double getNextPlatformWidth() {
+        return nextPlatformWidth;
+    }
 
+    private int cherries;
+
+    private Position playerPosition;
+    private Position currentPlatformPosition;
+    private Position nextPlatformPosition;
+
+    private double currentPlatformWidth;
+
+    private double nextPlatformWidth;
+
+    public SavedGame(int score, int cherries, Position playerPosition, Position currentPlatformPosition,
+        Position nextPlatformPosition, double currentPlatformWidth, double nextPlatformWidth) {
+        this.score = score;
+        this.cherries = cherries;
+        this.playerPosition = playerPosition;
+        this.currentPlatformPosition = currentPlatformPosition;
+        this.nextPlatformPosition = nextPlatformPosition;
+        this.currentPlatformWidth = currentPlatformWidth;
+        this.nextPlatformWidth = nextPlatformWidth;
+    }
+
+    public static SavedGame loadFromFile(String filename) {
+        SavedGame object1 = null;
+        try
+
+        {
+            // Reading the object from a file
+            FileInputStream file = new FileInputStream(filename);
+            ObjectInputStream in = new ObjectInputStream(file);
+
+            // Method for deserialization of object
+            object1 = (SavedGame)in.readObject();
+
+            in.close();
+            file.close();
+
+        }
+
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+            System.out.println("IOException is caught");
+        }
+        return object1;
     }
     public void saveToFile(String filePath) {
 
+    }
+
+
+    public int getScore() {
+        return score;
+    }
+
+    public int getCherries() {
+        return cherries;
+    }
+
+    public Position getPlayerPosition() {
+        return playerPosition;
+    }
+
+    public Position getCurrentPlatformPosition() {
+        return currentPlatformPosition;
+    }
+
+    public Position getNextPlatformPosition() {
+        return nextPlatformPosition;
     }
 }

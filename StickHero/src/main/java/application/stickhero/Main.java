@@ -19,7 +19,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         // Instantiate and show your main page or initial UI here
-        MainPage mainPage = new MainPage();
+        MainPage mainPage = MainPage.getInstance();
         try {
             mainPage.start(primaryStage);
         } catch (Exception e) {
