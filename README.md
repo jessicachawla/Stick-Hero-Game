@@ -11,9 +11,7 @@
 ## Things we have done:
 1. Design Patterns - Singleton on player, mainpage and exitpage. Builder for Stick (StickBuilder).
 2. Junit testing has been done.
-3. Multithreading has been done(bonus part).
-
-## Details:
-Group Members:
-1. Ishita: 2022224
-2. Jessica Kaur Chawla: 2022230
+3. Multithreading has been done.
+4. Revive feature has been added which is not there in the actual game.
+5. Saving of a game can be done at any moment of the game, click the paur button and then on the pause screen click the save button.
+6. The rest of the game is similar to the actual game.
